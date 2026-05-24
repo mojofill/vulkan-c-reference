@@ -1,7 +1,7 @@
 CMakeFiles/vk_app.dir/src/main.c.o: \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/main.c \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/renderer.h \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/vk_types.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/vk_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -111,12 +111,12 @@ CMakeFiles/vk_app.dir/src/main.c.o: \
   /usr/local/include/vk_video/vulkan_video_codec_vp9std_decode.h \
   /usr/local/include/vulkan/vulkan_beta.h \
   /usr/local/include/GLFW/glfw3.h \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/swapchain.h \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/commands.h \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/graphics_pipeline.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/buffer.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \

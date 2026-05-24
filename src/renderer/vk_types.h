@@ -39,6 +39,8 @@ typedef struct vk_context {
     // Vertex buffer information
     VkVertexInputBindingDescription bindingDesc; // works for now, in the future when using more types of vertices, need a more robust system
     VkVertexInputAttributeDescription attrDescs[2]; // come back here when adding more attributes to a vertex
+    VkBuffer testVertexBuffer;
+    VkDeviceMemory testVertexBufferMemory;
 
     // Render pass + graphics pipeline
     VkRenderPass renderPass;

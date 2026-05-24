@@ -1,7 +1,7 @@
 CMakeFiles/vk_app.dir/src/renderer/buffer.c.o: \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/buffer.c \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/buffer.h \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/vk_types.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/vk_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \

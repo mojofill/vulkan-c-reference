@@ -47,7 +47,7 @@ void recordCommands(vk_context *vko, uint32_t currentFrame) {
         renderPassInfoCmd.renderArea.extent = vko->surfaceCapabilities.currentExtent;
 
         VkClearValue clearColors[2] = {{0}, {0}};
-        clearColors[0].color = (VkClearColorValue) {0.53f, 0.81f, 0.92f, 1.0f};
+        clearColors[0].color = (VkClearColorValue) {0.0f, 0.0f, 0.0f, 0.0f};
         clearColors[1].depthStencil = (VkClearDepthStencilValue) {1.0f, 0};
     
         renderPassInfoCmd.clearValueCount = 2;
@@ -79,8 +79,8 @@ void recordCommands(vk_context *vko, uint32_t currentFrame) {
 
         // ADD DRAW COMMANDS HERE
 
-        printf("need to add draw commands here\n");
-        exit(1);
+        vkCmdBindVertexBuffers(vko->commandBuffers[i], 0, 1, &vko->testVertexBuffer, (VkDeviceSize[]) {0});
+        vkCmdDraw(vko->commandBuffers[i], 3, 1, 0, 0);
 
         vkCmdEndRenderPass(vko->commandBuffers[i]);
         vkEndCommandBuffer(vko->commandBuffers[i]);

@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/CMakeLists.txt"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/CMakeLists.txt"
   "CMakeFiles/4.2.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.1/CMakeSystem.cmake"
   "/usr/local/lib/cmake/glfw3/glfw3Config.cmake"

@@ -13,6 +13,7 @@ static void initWindow(vk_context *vko) {
         exit(1);
     }
 
+    glfwSetWindowPos(vko->window, 0, 0);
     glfwSetWindowUserPointer(vko->window, vko); // easy usage of god object within GLFW
     glfwSetFramebufferSizeCallback(vko->window, framebufferResizeCallback);
 }
@@ -391,6 +392,8 @@ void cleanupRenderer(vk_context *vko) {
     vkDestroyPipeline(vko->device, vko->graphicsPipeline, NULL);
     vkDestroyPipelineLayout(vko->device, vko->pipelineLayout, NULL);
     vkDestroyRenderPass(vko->device, vko->renderPass, NULL);
+    vkFreeMemory(vko->device, vko->testVertexBufferMemory, NULL);
+    vkDestroyBuffer(vko->device, vko->testVertexBuffer, NULL);
     cleanupSwapchain(vko);
     vkDestroySurfaceKHR(vko->instance, vko->surface, NULL);
     vkDestroyDevice(vko->device, NULL);
