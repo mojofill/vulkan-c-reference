@@ -2,6 +2,8 @@
 #define GRAPHICS_PIPELINE_H
 
 #include "vk_types.h"
+#include "swapchain.h"
+#include <assert.h>
 
 void createPipeline(
     vk_context *vko,

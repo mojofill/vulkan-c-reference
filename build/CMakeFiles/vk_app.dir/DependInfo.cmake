@@ -8,11 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/henry/Desktop/vulkan-projects/vulkan-c-reference-windows/src/main.c" "CMakeFiles/vk_app.dir/src/main.c.obj" "gcc" "CMakeFiles/vk_app.dir/src/main.c.obj.d"
-  "C:/Users/henry/Desktop/vulkan-projects/vulkan-c-reference-windows/src/renderer/commands.c" "CMakeFiles/vk_app.dir/src/renderer/commands.c.obj" "gcc" "CMakeFiles/vk_app.dir/src/renderer/commands.c.obj.d"
-  "C:/Users/henry/Desktop/vulkan-projects/vulkan-c-reference-windows/src/renderer/graphics_pipeline.c" "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.obj" "gcc" "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.obj.d"
-  "C:/Users/henry/Desktop/vulkan-projects/vulkan-c-reference-windows/src/renderer/renderer.c" "CMakeFiles/vk_app.dir/src/renderer/renderer.c.obj" "gcc" "CMakeFiles/vk_app.dir/src/renderer/renderer.c.obj.d"
-  "C:/Users/henry/Desktop/vulkan-projects/vulkan-c-reference-windows/src/renderer/swapchain.c" "CMakeFiles/vk_app.dir/src/renderer/swapchain.c.obj" "gcc" "CMakeFiles/vk_app.dir/src/renderer/swapchain.c.obj.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/main.c" "CMakeFiles/vk_app.dir/src/main.c.o" "gcc" "CMakeFiles/vk_app.dir/src/main.c.o.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/buffer.c" "CMakeFiles/vk_app.dir/src/renderer/buffer.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/buffer.c.o.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/commands.c" "CMakeFiles/vk_app.dir/src/renderer/commands.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/commands.c.o.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/graphics_pipeline.c" "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/renderer.c" "CMakeFiles/vk_app.dir/src/renderer/renderer.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/renderer.c.o.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-windows-reference/src/renderer/swapchain.c" "CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

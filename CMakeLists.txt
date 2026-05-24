@@ -10,6 +10,7 @@ find_package(glfw3 CONFIG REQUIRED)
 
 add_executable(vk_app 
     src/main.c
+    src/renderer/buffer.c
     src/renderer/commands.c
     src/renderer/graphics_pipeline.c
     src/renderer/renderer.c

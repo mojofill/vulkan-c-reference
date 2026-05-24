@@ -4,6 +4,11 @@
 // Scope of file: initializes Vulkan + GLFW + screen related stuff
 
 #include "vk_types.h"
+#include "swapchain.h"
+#include "commands.h"
+#include "graphics_pipeline.h"
+#include "buffer.h"
+#include <string.h>
 
 #define MAX_FRAMES_IN_FLIGHT 2
 
@@ -24,6 +29,7 @@ static void createSyncObjects(vk_context *vko);
 
 // public functions
 void drawFrame(vk_context *vko, uint32_t *currentFrame);
+void initRenderer(vk_context *vko);
 void cleanupRenderer(vk_context *vko);
 
 #endif

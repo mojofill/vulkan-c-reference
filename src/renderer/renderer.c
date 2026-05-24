@@ -233,7 +233,9 @@ static void createRenderpass(vk_context *vko) {
     subpass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS; // running GRAPHICS pipeline - not a compute pipeline
     subpass.colorAttachmentCount = 1; // one SINGULAR color output, which is attachment #0. attachment = "logical" i
     subpass.pColorAttachments = &colorAttachmentRef; // array decay, for single length array just pointer to first
-    subpass.pDepthStencilAttachment = &depthAttachmentRef;
+    
+    // Uncomment this to add depth testing for 3D simulations
+    // subpass.pDepthStencilAttachment = &depthAttachmentRef;
 
     VkSubpassDependency dependency = {0};
     dependency.srcSubpass = VK_SUBPASS_EXTERNAL; // think negative 1 when srcSubpass is VK_SUBPASS_EXTERNAL, and max+1 when it is dstSubpass (dst = destination)
@@ -243,11 +245,12 @@ static void createRenderpass(vk_context *vko) {
     dependency.dstStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT | VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT; // only when subpass 0 finished can pipeline move onto this stage
     dependency.dstAccessMask = VK_ACCESS_COLOR_ATTACHMENT_WRITE_BIT | VK_ACCESS_DEPTH_STENCIL_ATTACHMENT_WRITE_BIT; // tells last implicit subpass to wait for subpass 0 t finish before writing to color attachment
 
-    VkAttachmentDescription attachments[2] = {colorAttachment, depthAttachment};
+    // VkAttachmentDescription attachments[2] = {colorAttachment, depthAttachment};
+    VkAttachmentDescription *attachments = &colorAttachment;
 
     VkRenderPassCreateInfo renderPassInfo = {0};
     renderPassInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO;
-    renderPassInfo.attachmentCount = 2;
+    renderPassInfo.attachmentCount = 1; // only one, cuz no depth stencil
     renderPassInfo.pAttachments = attachments;
     renderPassInfo.subpassCount = 1;
     renderPassInfo.pSubpasses = &subpass;
@@ -300,6 +303,8 @@ static void initVulkan(vk_context *vko) {
     createImageViews(vko); // image view = vulkan interpretation of raw image source
     createCommandPool(vko);
     createRenderpass(vko);
+    setVertexAttributeDescriptions(vko);
+    setVertexBindingDescription(vko);
     createGraphicsPipeline(vko);
     createFramebuffers(vko);
     createCommandBuffers(vko);

@@ -81,21 +81,21 @@ void createPipeline(
     // Turn these on if making a 3D game and using depth buffers
 
     // depth buffering
-    // VkPipelineDepthStencilStateCreateInfo depthStencil = {0};
-    // depthStencil.sType = VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
-    // depthStencil.depthTestEnable = depthTestEnable;
-    // depthStencil.depthWriteEnable = depthWriteEnable;
-    // depthStencil.depthCompareOp = VK_COMPARE_OP_LESS;
-    // depthStencil.depthBoundsTestEnable = VK_FALSE;
-    // depthStencil.minDepthBounds = 0.0f; // Optional
-    // depthStencil.maxDepthBounds = 1.0f; // Optional
-    // depthStencil.stencilTestEnable = VK_FALSE;
+    VkPipelineDepthStencilStateCreateInfo depthStencil = {0};
+    depthStencil.sType = VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
+    depthStencil.depthTestEnable = depthTestEnable;
+    depthStencil.depthWriteEnable = depthWriteEnable;
+    depthStencil.depthCompareOp = VK_COMPARE_OP_LESS;
+    depthStencil.depthBoundsTestEnable = VK_FALSE;
+    depthStencil.minDepthBounds = 0.0f; // Optional
+    depthStencil.maxDepthBounds = 1.0f; // Optional
+    depthStencil.stencilTestEnable = VK_FALSE;
 
     // multisampling (anti aliasing)
-    // VkPipelineMultisampleStateCreateInfo multisampling = {0};
-    // multisampling.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
-    // multisampling.sampleShadingEnable = VK_FALSE; // turned off for now
-    // multisampling.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
+    VkPipelineMultisampleStateCreateInfo multisampling = {0};
+    multisampling.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
+    multisampling.sampleShadingEnable = VK_FALSE; // turned off for now
+    multisampling.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
 
     // per framebuffer color blending settings
     // color blend = blending the rgba channels
@@ -133,11 +133,9 @@ void createPipeline(
     pipelineInfo.pInputAssemblyState = &inputAssembly;
     pipelineInfo.pViewportState = &viewportState;
     pipelineInfo.pRasterizationState = &rasterizer;
-    // pipelineInfo.pMultisampleState = &multisampling;
-    pipelineInfo.pMultisampleState = NULL;
+    pipelineInfo.pMultisampleState = &multisampling;
     pipelineInfo.pColorBlendState = &colorBlending;
-    // pipelineInfo.pDepthStencilState = &depthStencil;
-    pipelineInfo.pDepthStencilState = NULL;
+    pipelineInfo.pDepthStencilState = &depthStencil;
     pipelineInfo.pDynamicState = &dynamicState;
     pipelineInfo.layout = vko->pipelineLayout;
     pipelineInfo.renderPass = vko->renderPass;
@@ -192,5 +190,18 @@ static VkShaderModule load_shader(VkDevice device, const char* path) {
 }
 
 void createGraphicsPipeline(vk_context *vko) {
-    createPipeline(vko, "./src/spvs/vert.spv", "./src/spvs/frag.spv", VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST, &vko->bindingDesc, 1, vko->attrDescs, 3, VK_TRUE, VK_TRUE, VK_CULL_MODE_BACK_BIT, &vko->graphicsPipeline);
+    createPipeline(
+        vko,
+        "./src/spvs/vert.spv",
+        "./src/spvs/frag.spv",
+        VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST,
+        &vko->bindingDesc,
+        1, // binding description count
+        vko->attrDescs,
+        2, // attribute description count
+        VK_FALSE, // depth test enable
+        VK_FALSE, // depth write enable
+        VK_CULL_MODE_BACK_BIT, // cull mode
+        &vko->graphicsPipeline
+    );
 }

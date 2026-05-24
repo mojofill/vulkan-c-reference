@@ -4,9 +4,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <vulkan/vulkan.h>
+#include <vulkan/vulkan_beta.h>
 #define GLFW_INCLUDE_NONE
 // for protection against vulkan
 #include <GLFW/glfw3.h>
+
+typedef struct Vertex {
+    float pos[2];
+    float color[3];
+} Vertex;
 
 typedef struct vk_context {
     // GLFW + Vulkan initialization
@@ -29,6 +35,10 @@ typedef struct vk_context {
     uint32_t swapchainImageCount;
     VkImage *swapchainImages;
     VkImageView *swapchainImageViews;
+
+    // Vertex buffer information
+    VkVertexInputBindingDescription bindingDesc; // works for now, in the future when using more types of vertices, need a more robust system
+    VkVertexInputAttributeDescription attrDescs[2]; // come back here when adding more attributes to a vertex
 
     // Render pass + graphics pipeline
     VkRenderPass renderPass;
