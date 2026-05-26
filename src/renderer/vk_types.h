@@ -9,6 +9,9 @@
 // for protection against vulkan
 #include <GLFW/glfw3.h>
 
+#define MAX_FRAMES_IN_FLIGHT 2
+#define UNIFORM_BUFFER_COUNT MAX_FRAMES_IN_FLIGHT
+
 typedef struct Vertex {
     float pos[2];
     float color[3];
@@ -47,6 +50,19 @@ typedef struct vk_context {
     VkPipelineLayout pipelineLayout;
     VkPipeline graphicsPipeline;
     VkFramebuffer *swapchainFramebuffers;
+
+    // Descriptors (uniforms)
+    VkDescriptorSetLayout descriptorSetLayout;
+    VkDescriptorPool descriptorPool;
+    VkDescriptorSet descriptorSets[UNIFORM_BUFFER_COUNT];
+
+    // just for testing!
+    float angle;
+
+    // Uniform buffer
+    VkBuffer uniformBuffers[UNIFORM_BUFFER_COUNT];
+    VkDeviceMemory uniformBufferMemories[UNIFORM_BUFFER_COUNT];
+    void *uniformBuffersMapped[UNIFORM_BUFFER_COUNT];
 
     // Dynamic pipeline bindings
     VkViewport viewport;

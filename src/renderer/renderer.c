@@ -303,6 +303,10 @@ static void initVulkan(vk_context *vko) {
     createSwapchain(vko);
     createImageViews(vko); // image view = vulkan interpretation of raw image source
     createCommandPool(vko);
+    createUniformBuffer(vko);
+    createDescriptorSetLayout(vko);
+    createDescriptorPool(vko);
+    createDescriptorSets(vko);
     createRenderpass(vko);
     setVertexAttributeDescriptions(vko);
     setVertexBindingDescription(vko);
@@ -393,6 +397,12 @@ void cleanupRenderer(vk_context *vko) {
     vkDestroyPipelineLayout(vko->device, vko->pipelineLayout, NULL);
     vkDestroyRenderPass(vko->device, vko->renderPass, NULL);
     vkFreeMemory(vko->device, vko->testVertexBufferMemory, NULL);
+    for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
+        vkDestroyBuffer(vko->device, vko->uniformBuffers[i], NULL);
+        vkFreeMemory(vko->device, vko->uniformBufferMemories[i], NULL);
+    }
+    vkDestroyDescriptorPool(vko->device, vko->descriptorPool, NULL);
+    vkDestroyDescriptorSetLayout(vko->device, vko->descriptorSetLayout, NULL);
     vkDestroyBuffer(vko->device, vko->testVertexBuffer, NULL);
     cleanupSwapchain(vko);
     vkDestroySurfaceKHR(vko->instance, vko->surface, NULL);

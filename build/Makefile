@@ -201,6 +201,30 @@ src/renderer/commands.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/commands.c.s
 .PHONY : src/renderer/commands.c.s
 
+src/renderer/descriptors.o: src/renderer/descriptors.c.o
+.PHONY : src/renderer/descriptors.o
+
+# target to build an object file
+src/renderer/descriptors.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o
+.PHONY : src/renderer/descriptors.c.o
+
+src/renderer/descriptors.i: src/renderer/descriptors.c.i
+.PHONY : src/renderer/descriptors.i
+
+# target to preprocess a source file
+src/renderer/descriptors.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/descriptors.c.i
+.PHONY : src/renderer/descriptors.c.i
+
+src/renderer/descriptors.s: src/renderer/descriptors.c.s
+.PHONY : src/renderer/descriptors.s
+
+# target to generate assembly for a file
+src/renderer/descriptors.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/descriptors.c.s
+.PHONY : src/renderer/descriptors.c.s
+
 src/renderer/graphics_pipeline.o: src/renderer/graphics_pipeline.c.o
 .PHONY : src/renderer/graphics_pipeline.o
 
@@ -291,6 +315,9 @@ help:
 	@echo "... src/renderer/commands.o"
 	@echo "... src/renderer/commands.i"
 	@echo "... src/renderer/commands.s"
+	@echo "... src/renderer/descriptors.o"
+	@echo "... src/renderer/descriptors.i"
+	@echo "... src/renderer/descriptors.s"
 	@echo "... src/renderer/graphics_pipeline.o"
 	@echo "... src/renderer/graphics_pipeline.i"
 	@echo "... src/renderer/graphics_pipeline.s"

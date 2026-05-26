@@ -6,6 +6,7 @@
 #include "vk_types.h"
 #include "swapchain.h"
 #include "commands.h"
+#include "descriptors.h"
 #include "graphics_pipeline.h"
 #include "buffer.h"
 #include <string.h>

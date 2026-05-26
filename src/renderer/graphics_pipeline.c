@@ -116,9 +116,8 @@ void createPipeline(
     // this will come in useful for future experiments
     VkPipelineLayoutCreateInfo pipelineLayoutInfo = {0};
     pipelineLayoutInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO;
-    pipelineLayoutInfo.setLayoutCount = 0;
-    // pipelineLayoutInfo.pSetLayouts = &vko->descriptorSetLayout;
-    pipelineLayoutInfo.pSetLayouts = NULL;
+    pipelineLayoutInfo.setLayoutCount = 1;
+    pipelineLayoutInfo.pSetLayouts = &vko->descriptorSetLayout;
     pipelineLayoutInfo.pushConstantRangeCount = 0;
 
     // should create an independent layout for each layout, but this works for now

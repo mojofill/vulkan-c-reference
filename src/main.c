@@ -1,5 +1,12 @@
 #include "renderer/renderer.h"
 
+void updateUniforms(vk_context *vko, uint32_t currentFrame) {
+    UniformBufferObject ubo = {0};
+    vko->angle += 0.01;
+    ubo.angle = vko->angle;
+    memcpy(vko->uniformBuffersMapped[currentFrame], &ubo, sizeof(UniformBufferObject));
+}
+
 void mainLoop(vk_context *vko) {
     uint32_t currentFrame = 0;
 
@@ -8,6 +15,7 @@ void mainLoop(vk_context *vko) {
         if (glfwGetKey(vko->window, GLFW_KEY_ESCAPE)) {
             glfwSetWindowShouldClose(vko->window, VK_TRUE);
         }
+        updateUniforms(vko, currentFrame);
         drawFrame(vko, &currentFrame);
     }
 }
@@ -49,11 +57,8 @@ void initializeTestVertexBuffer(vk_context *vko) {
 int main() {
     vk_context vko = {0};
 
-    // in the future, i should make a large parameter struct that holds all the
-    // different arguments that i want to pass in
-    // for example, i want to be able to directly call here that i want to use
-    // topology points
-    // but this is good enough for now!
+    // GOAL FOR TOMORROW: create a UniformBufferObject (ubo) that stores time and spins
+    // the triangle
 
     initRenderer(&vko);
     initializeTestVertexBuffer(&vko);

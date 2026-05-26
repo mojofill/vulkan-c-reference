@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build",
+  "command": "/usr/bin/clang   -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/vk_app.dir/src/main.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c",
+  "file": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c",
+  "output": "CMakeFiles/vk_app.dir/src/main.c.o"
+},
+{
+  "directory": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build",
+  "command": "/usr/bin/clang   -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/vk_app.dir/src/renderer/buffer.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c",
+  "file": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c",
+  "output": "CMakeFiles/vk_app.dir/src/renderer/buffer.c.o"
+},
+{
+  "directory": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build",
+  "command": "/usr/bin/clang   -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/vk_app.dir/src/renderer/commands.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c",
+  "file": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c",
+  "output": "CMakeFiles/vk_app.dir/src/renderer/commands.c.o"
+},
+{
+  "directory": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build",
+  "command": "/usr/bin/clang   -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c",
+  "file": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c",
+  "output": "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o"
+},
+{
+  "directory": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build",
+  "command": "/usr/bin/clang   -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/vk_app.dir/src/renderer/renderer.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c",
+  "file": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c",
+  "output": "CMakeFiles/vk_app.dir/src/renderer/renderer.c.o"
+},
+{
+  "directory": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build",
+  "command": "/usr/bin/clang   -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c",
+  "file": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c",
+  "output": "CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o"
+},
+{
+  "directory": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build",
+  "command": "/usr/bin/clang   -O3 -DNDEBUG -std=gnu11 -o CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c",
+  "file": "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c",
+  "output": "CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o"
+}
+]

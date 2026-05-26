@@ -78,7 +78,7 @@ void recordCommands(vk_context *vko, uint32_t currentFrame) {
         // vkCmdBindDescriptorSets(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, vko->pipelineLayout, 0, 1, &vko->descriptorSets[currentFrame], 0, NULL);
 
         // ADD DRAW COMMANDS HERE
-
+        vkCmdBindDescriptorSets(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, vko->pipelineLayout, 0, 1, &vko->descriptorSets[currentFrame], 0, NULL);
         vkCmdBindVertexBuffers(vko->commandBuffers[i], 0, 1, &vko->testVertexBuffer, (VkDeviceSize[]) {0});
         vkCmdDraw(vko->commandBuffers[i], 3, 1, 0, 0);
 

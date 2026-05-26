@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/vk_app.dir/src/renderer/buffer.c.o.d"
   "CMakeFiles/vk_app.dir/src/renderer/commands.c.o"
   "CMakeFiles/vk_app.dir/src/renderer/commands.c.o.d"
+  "CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o"
+  "CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o.d"
   "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o"
   "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o.d"
   "CMakeFiles/vk_app.dir/src/renderer/renderer.c.o"

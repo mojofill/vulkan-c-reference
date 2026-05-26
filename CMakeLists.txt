@@ -15,6 +15,7 @@ add_executable(vk_app
     src/renderer/graphics_pipeline.c
     src/renderer/renderer.c
     src/renderer/swapchain.c
+    src/renderer/descriptors.c
 )
 
 target_include_directories(vk_app PRIVATE
