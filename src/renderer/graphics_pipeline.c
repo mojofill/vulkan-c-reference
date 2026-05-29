@@ -121,7 +121,7 @@ void createPipeline(
     pipelineLayoutInfo.pushConstantRangeCount = 0;
 
     // should create an independent layout for each layout, but this works for now
-    if (vko->pipelineLayout == NULL) vkCreatePipelineLayout(vko->device, &pipelineLayoutInfo, NULL, &vko->pipelineLayout);
+    if (vko->graphicsPipelineLayout == NULL) vkCreatePipelineLayout(vko->device, &pipelineLayoutInfo, NULL, &vko->graphicsPipelineLayout);
 
     // now finally, put everything together into a graphics pipeline object
     VkGraphicsPipelineCreateInfo pipelineInfo = {0};
@@ -136,7 +136,7 @@ void createPipeline(
     pipelineInfo.pColorBlendState = &colorBlending;
     pipelineInfo.pDepthStencilState = &depthStencil;
     pipelineInfo.pDynamicState = &dynamicState;
-    pipelineInfo.layout = vko->pipelineLayout;
+    pipelineInfo.layout = vko->graphicsPipelineLayout;
     pipelineInfo.renderPass = vko->renderPass;
     pipelineInfo.subpass = 0; // ??? i think this is an index? this means it targets subpass 0
     // subpasses are only for render passes aye man these will make sense in the future. think subpasses either read or write to attachments in the swapchain
@@ -153,7 +153,7 @@ void createPipeline(
     vkDestroyShaderModule(vko->device, fragmentShaderModule, NULL);
 }
 
-static VkShaderModule load_shader(VkDevice device, const char* path) {
+VkShaderModule load_shader(VkDevice device, const char* path) {
     FILE *f;
     long len;
     char *buffer;
@@ -197,7 +197,7 @@ void createGraphicsPipeline(vk_context *vko) {
         &vko->bindingDesc,
         1, // binding description count
         vko->attrDescs,
-        2, // attribute description count
+        1, // attribute description count
         VK_FALSE, // depth test enable
         VK_FALSE, // depth write enable
         VK_CULL_MODE_BACK_BIT, // cull mode

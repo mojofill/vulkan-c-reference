@@ -11,8 +11,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c" "CMakeFiles/vk_app.dir/src/main.c.o" "gcc" "CMakeFiles/vk_app.dir/src/main.c.o.d"
   "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c" "CMakeFiles/vk_app.dir/src/renderer/buffer.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/buffer.c.o.d"
   "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c" "CMakeFiles/vk_app.dir/src/renderer/commands.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/commands.c.o.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/compute_pipeline.c" "CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o.d"
   "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c" "CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o.d"
   "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c" "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o.d"
+  "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/image.c" "CMakeFiles/vk_app.dir/src/renderer/image.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/image.c.o.d"
   "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c" "CMakeFiles/vk_app.dir/src/renderer/renderer.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/renderer.c.o.d"
   "/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c" "CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o" "gcc" "CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o.d"
   )

@@ -14,7 +14,7 @@
 
 typedef struct Vertex {
     float pos[2];
-    float color[3];
+    // float color[3]; // for now dont need color
 } Vertex;
 
 typedef struct vk_context {
@@ -41,14 +41,16 @@ typedef struct vk_context {
 
     // Vertex buffer information
     VkVertexInputBindingDescription bindingDesc; // works for now, in the future when using more types of vertices, need a more robust system
-    VkVertexInputAttributeDescription attrDescs[2]; // come back here when adding more attributes to a vertex
+    VkVertexInputAttributeDescription attrDescs[1]; // come back here when adding more attributes to a vertex
     VkBuffer testVertexBuffer;
     VkDeviceMemory testVertexBufferMemory;
 
     // Render pass + graphics pipeline
     VkRenderPass renderPass;
-    VkPipelineLayout pipelineLayout;
+    VkPipelineLayout graphicsPipelineLayout;
+    VkPipelineLayout computePipelineLayout;
     VkPipeline graphicsPipeline;
+    VkPipeline computePipeline;
     VkFramebuffer *swapchainFramebuffers;
 
     // Descriptors (uniforms)
@@ -63,6 +65,12 @@ typedef struct vk_context {
     VkBuffer uniformBuffers[UNIFORM_BUFFER_COUNT];
     VkDeviceMemory uniformBufferMemories[UNIFORM_BUFFER_COUNT];
     void *uniformBuffersMapped[UNIFORM_BUFFER_COUNT];
+
+    // Storage image
+    VkImage storageImage;
+    VkImageView storageImageView;
+    VkDeviceMemory storageImageMemory;
+    VkSampler storageSampler;
 
     // Dynamic pipeline bindings
     VkViewport viewport;

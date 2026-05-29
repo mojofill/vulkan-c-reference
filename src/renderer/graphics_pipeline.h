@@ -20,6 +20,6 @@ void createPipeline(
     VkPipeline *destPipeline
 );
 void createGraphicsPipeline(vk_context *vko);
-static VkShaderModule load_shader(VkDevice device, const char* path);
+VkShaderModule load_shader(VkDevice device, const char* path);
 
 #endif

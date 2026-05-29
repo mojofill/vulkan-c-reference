@@ -21,6 +21,7 @@ mkdir -p "$SPV_DIR"
 echo "Compiling shaders..."
 glslc src/shaders/shader.vert -o "$SPV_DIR/vert.spv"
 glslc src/shaders/shader.frag -o "$SPV_DIR/frag.spv"
+glslc src/shaders/shader.comp -o "$SPV_DIR/comp.spv"
 
 echo "Configuring CMake..."
 cmake -S . -B "$BUILD_DIR" \

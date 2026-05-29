@@ -201,6 +201,30 @@ src/renderer/commands.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/commands.c.s
 .PHONY : src/renderer/commands.c.s
 
+src/renderer/compute_pipeline.o: src/renderer/compute_pipeline.c.o
+.PHONY : src/renderer/compute_pipeline.o
+
+# target to build an object file
+src/renderer/compute_pipeline.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o
+.PHONY : src/renderer/compute_pipeline.c.o
+
+src/renderer/compute_pipeline.i: src/renderer/compute_pipeline.c.i
+.PHONY : src/renderer/compute_pipeline.i
+
+# target to preprocess a source file
+src/renderer/compute_pipeline.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.i
+.PHONY : src/renderer/compute_pipeline.c.i
+
+src/renderer/compute_pipeline.s: src/renderer/compute_pipeline.c.s
+.PHONY : src/renderer/compute_pipeline.s
+
+# target to generate assembly for a file
+src/renderer/compute_pipeline.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.s
+.PHONY : src/renderer/compute_pipeline.c.s
+
 src/renderer/descriptors.o: src/renderer/descriptors.c.o
 .PHONY : src/renderer/descriptors.o
 
@@ -248,6 +272,30 @@ src/renderer/graphics_pipeline.s: src/renderer/graphics_pipeline.c.s
 src/renderer/graphics_pipeline.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.s
 .PHONY : src/renderer/graphics_pipeline.c.s
+
+src/renderer/image.o: src/renderer/image.c.o
+.PHONY : src/renderer/image.o
+
+# target to build an object file
+src/renderer/image.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/image.c.o
+.PHONY : src/renderer/image.c.o
+
+src/renderer/image.i: src/renderer/image.c.i
+.PHONY : src/renderer/image.i
+
+# target to preprocess a source file
+src/renderer/image.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/image.c.i
+.PHONY : src/renderer/image.c.i
+
+src/renderer/image.s: src/renderer/image.c.s
+.PHONY : src/renderer/image.s
+
+# target to generate assembly for a file
+src/renderer/image.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vk_app.dir/build.make CMakeFiles/vk_app.dir/src/renderer/image.c.s
+.PHONY : src/renderer/image.c.s
 
 src/renderer/renderer.o: src/renderer/renderer.c.o
 .PHONY : src/renderer/renderer.o
@@ -315,12 +363,18 @@ help:
 	@echo "... src/renderer/commands.o"
 	@echo "... src/renderer/commands.i"
 	@echo "... src/renderer/commands.s"
+	@echo "... src/renderer/compute_pipeline.o"
+	@echo "... src/renderer/compute_pipeline.i"
+	@echo "... src/renderer/compute_pipeline.s"
 	@echo "... src/renderer/descriptors.o"
 	@echo "... src/renderer/descriptors.i"
 	@echo "... src/renderer/descriptors.s"
 	@echo "... src/renderer/graphics_pipeline.o"
 	@echo "... src/renderer/graphics_pipeline.i"
 	@echo "... src/renderer/graphics_pipeline.s"
+	@echo "... src/renderer/image.o"
+	@echo "... src/renderer/image.i"
+	@echo "... src/renderer/image.s"
 	@echo "... src/renderer/renderer.o"
 	@echo "... src/renderer/renderer.i"
 	@echo "... src/renderer/renderer.s"

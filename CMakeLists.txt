@@ -12,10 +12,12 @@ add_executable(vk_app
     src/main.c
     src/renderer/buffer.c
     src/renderer/commands.c
+    src/renderer/compute_pipeline.c
+    src/renderer/descriptors.c
     src/renderer/graphics_pipeline.c
+    src/renderer/image.c
     src/renderer/renderer.c
     src/renderer/swapchain.c
-    src/renderer/descriptors.c
 )
 
 target_include_directories(vk_app PRIVATE

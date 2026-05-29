@@ -2,6 +2,7 @@
 #define COMMANDS_H
 
 #include "vk_types.h"
+#include "compute_pipeline.h"
 
 void createCommandPool(vk_context *vko);
 void createCommandBuffers(vk_context *vko);

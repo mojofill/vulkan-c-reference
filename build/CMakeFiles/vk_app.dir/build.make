@@ -76,109 +76,139 @@ CMakeFiles/vk_app.dir/src/main.c.o: CMakeFiles/vk_app.dir/flags.make
 CMakeFiles/vk_app.dir/src/main.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c
 CMakeFiles/vk_app.dir/src/main.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/vk_app.dir/src/main.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/main.c.o -MF CMakeFiles/vk_app.dir/src/main.c.o.d -o CMakeFiles/vk_app.dir/src/main.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/main.c.o -MF CMakeFiles/vk_app.dir/src/main.c.o.d -o CMakeFiles/vk_app.dir/src/main.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c
 
 CMakeFiles/vk_app.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/main.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c > CMakeFiles/vk_app.dir/src/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c > CMakeFiles/vk_app.dir/src/main.c.i
 
 CMakeFiles/vk_app.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/main.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c -o CMakeFiles/vk_app.dir/src/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/main.c -o CMakeFiles/vk_app.dir/src/main.c.s
 
 CMakeFiles/vk_app.dir/src/renderer/buffer.c.o: CMakeFiles/vk_app.dir/flags.make
 CMakeFiles/vk_app.dir/src/renderer/buffer.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c
 CMakeFiles/vk_app.dir/src/renderer/buffer.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/vk_app.dir/src/renderer/buffer.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/buffer.c.o -MF CMakeFiles/vk_app.dir/src/renderer/buffer.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/buffer.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/buffer.c.o -MF CMakeFiles/vk_app.dir/src/renderer/buffer.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/buffer.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c
 
 CMakeFiles/vk_app.dir/src/renderer/buffer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/buffer.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c > CMakeFiles/vk_app.dir/src/renderer/buffer.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c > CMakeFiles/vk_app.dir/src/renderer/buffer.c.i
 
 CMakeFiles/vk_app.dir/src/renderer/buffer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/buffer.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c -o CMakeFiles/vk_app.dir/src/renderer/buffer.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.c -o CMakeFiles/vk_app.dir/src/renderer/buffer.c.s
 
 CMakeFiles/vk_app.dir/src/renderer/commands.c.o: CMakeFiles/vk_app.dir/flags.make
 CMakeFiles/vk_app.dir/src/renderer/commands.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c
 CMakeFiles/vk_app.dir/src/renderer/commands.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/vk_app.dir/src/renderer/commands.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/commands.c.o -MF CMakeFiles/vk_app.dir/src/renderer/commands.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/commands.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/commands.c.o -MF CMakeFiles/vk_app.dir/src/renderer/commands.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/commands.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c
 
 CMakeFiles/vk_app.dir/src/renderer/commands.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/commands.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c > CMakeFiles/vk_app.dir/src/renderer/commands.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c > CMakeFiles/vk_app.dir/src/renderer/commands.c.i
 
 CMakeFiles/vk_app.dir/src/renderer/commands.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/commands.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c -o CMakeFiles/vk_app.dir/src/renderer/commands.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.c -o CMakeFiles/vk_app.dir/src/renderer/commands.c.s
 
-CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o: CMakeFiles/vk_app.dir/flags.make
-CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c
-CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o -MF CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c
+CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o: CMakeFiles/vk_app.dir/flags.make
+CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/compute_pipeline.c
+CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o -MF CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/compute_pipeline.c
 
-CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c > CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.i
+CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/compute_pipeline.c > CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.i
 
-CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c -o CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.s
-
-CMakeFiles/vk_app.dir/src/renderer/renderer.c.o: CMakeFiles/vk_app.dir/flags.make
-CMakeFiles/vk_app.dir/src/renderer/renderer.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c
-CMakeFiles/vk_app.dir/src/renderer/renderer.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/vk_app.dir/src/renderer/renderer.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/renderer.c.o -MF CMakeFiles/vk_app.dir/src/renderer/renderer.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/renderer.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c
-
-CMakeFiles/vk_app.dir/src/renderer/renderer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/renderer.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c > CMakeFiles/vk_app.dir/src/renderer/renderer.c.i
-
-CMakeFiles/vk_app.dir/src/renderer/renderer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/renderer.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c -o CMakeFiles/vk_app.dir/src/renderer/renderer.c.s
-
-CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o: CMakeFiles/vk_app.dir/flags.make
-CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c
-CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o -MF CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c
-
-CMakeFiles/vk_app.dir/src/renderer/swapchain.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/swapchain.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c > CMakeFiles/vk_app.dir/src/renderer/swapchain.c.i
-
-CMakeFiles/vk_app.dir/src/renderer/swapchain.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/swapchain.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c -o CMakeFiles/vk_app.dir/src/renderer/swapchain.c.s
+CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/compute_pipeline.c -o CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.s
 
 CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o: CMakeFiles/vk_app.dir/flags.make
 CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c
 CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o -MF CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o -MF CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c
 
 CMakeFiles/vk_app.dir/src/renderer/descriptors.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/descriptors.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c > CMakeFiles/vk_app.dir/src/renderer/descriptors.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c > CMakeFiles/vk_app.dir/src/renderer/descriptors.c.i
 
 CMakeFiles/vk_app.dir/src/renderer/descriptors.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/descriptors.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c -o CMakeFiles/vk_app.dir/src/renderer/descriptors.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.c -o CMakeFiles/vk_app.dir/src/renderer/descriptors.c.s
+
+CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o: CMakeFiles/vk_app.dir/flags.make
+CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c
+CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o -MF CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c
+
+CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c > CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.i
+
+CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.c -o CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.s
+
+CMakeFiles/vk_app.dir/src/renderer/image.c.o: CMakeFiles/vk_app.dir/flags.make
+CMakeFiles/vk_app.dir/src/renderer/image.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/image.c
+CMakeFiles/vk_app.dir/src/renderer/image.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/vk_app.dir/src/renderer/image.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/image.c.o -MF CMakeFiles/vk_app.dir/src/renderer/image.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/image.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/image.c
+
+CMakeFiles/vk_app.dir/src/renderer/image.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/image.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/image.c > CMakeFiles/vk_app.dir/src/renderer/image.c.i
+
+CMakeFiles/vk_app.dir/src/renderer/image.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/image.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/image.c -o CMakeFiles/vk_app.dir/src/renderer/image.c.s
+
+CMakeFiles/vk_app.dir/src/renderer/renderer.c.o: CMakeFiles/vk_app.dir/flags.make
+CMakeFiles/vk_app.dir/src/renderer/renderer.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c
+CMakeFiles/vk_app.dir/src/renderer/renderer.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/vk_app.dir/src/renderer/renderer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/renderer.c.o -MF CMakeFiles/vk_app.dir/src/renderer/renderer.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/renderer.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c
+
+CMakeFiles/vk_app.dir/src/renderer/renderer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/renderer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c > CMakeFiles/vk_app.dir/src/renderer/renderer.c.i
+
+CMakeFiles/vk_app.dir/src/renderer/renderer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/renderer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/renderer.c -o CMakeFiles/vk_app.dir/src/renderer/renderer.c.s
+
+CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o: CMakeFiles/vk_app.dir/flags.make
+CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o: /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c
+CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o: CMakeFiles/vk_app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o -MF CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o.d -o CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o -c /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c
+
+CMakeFiles/vk_app.dir/src/renderer/swapchain.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/vk_app.dir/src/renderer/swapchain.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c > CMakeFiles/vk_app.dir/src/renderer/swapchain.c.i
+
+CMakeFiles/vk_app.dir/src/renderer/swapchain.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/vk_app.dir/src/renderer/swapchain.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.c -o CMakeFiles/vk_app.dir/src/renderer/swapchain.c.s
 
 # Object files for target vk_app
 vk_app_OBJECTS = \
 "CMakeFiles/vk_app.dir/src/main.c.o" \
 "CMakeFiles/vk_app.dir/src/renderer/buffer.c.o" \
 "CMakeFiles/vk_app.dir/src/renderer/commands.c.o" \
+"CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o" \
+"CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o" \
 "CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o" \
+"CMakeFiles/vk_app.dir/src/renderer/image.c.o" \
 "CMakeFiles/vk_app.dir/src/renderer/renderer.c.o" \
-"CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o" \
-"CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o"
+"CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o"
 
 # External object files for target vk_app
 vk_app_EXTERNAL_OBJECTS =
@@ -186,15 +216,17 @@ vk_app_EXTERNAL_OBJECTS =
 vk_app: CMakeFiles/vk_app.dir/src/main.c.o
 vk_app: CMakeFiles/vk_app.dir/src/renderer/buffer.c.o
 vk_app: CMakeFiles/vk_app.dir/src/renderer/commands.c.o
+vk_app: CMakeFiles/vk_app.dir/src/renderer/compute_pipeline.c.o
+vk_app: CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o
 vk_app: CMakeFiles/vk_app.dir/src/renderer/graphics_pipeline.c.o
+vk_app: CMakeFiles/vk_app.dir/src/renderer/image.c.o
 vk_app: CMakeFiles/vk_app.dir/src/renderer/renderer.c.o
 vk_app: CMakeFiles/vk_app.dir/src/renderer/swapchain.c.o
-vk_app: CMakeFiles/vk_app.dir/src/renderer/descriptors.c.o
 vk_app: CMakeFiles/vk_app.dir/build.make
 vk_app: /usr/local/lib/libvulkan.dylib
 vk_app: /usr/local/lib/libglfw.3.4.dylib
 vk_app: CMakeFiles/vk_app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C executable vk_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable vk_app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vk_app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

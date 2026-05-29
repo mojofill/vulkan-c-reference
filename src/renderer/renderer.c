@@ -293,29 +293,6 @@ static void createSyncObjects(vk_context *vko) {
     }
 }
 
-static void initVulkan(vk_context *vko) {
-    vko->framebufferResized = 0; // initialize framebuffer resizing flag to 0 (off)
-    createInstance(vko);
-    pickPhysicalDevice(vko);
-    createSurface(vko);
-    findQueueFamilies(vko);
-    createLogicalDevice(vko);
-    createSwapchain(vko);
-    createImageViews(vko); // image view = vulkan interpretation of raw image source
-    createCommandPool(vko);
-    createUniformBuffer(vko);
-    createDescriptorSetLayout(vko);
-    createDescriptorPool(vko);
-    createDescriptorSets(vko);
-    createRenderpass(vko);
-    setVertexAttributeDescriptions(vko);
-    setVertexBindingDescription(vko);
-    createGraphicsPipeline(vko);
-    createFramebuffers(vko);
-    createCommandBuffers(vko);
-    createSyncObjects(vko);
-}
-
 // public rendering functions
 void drawFrame(vk_context *vko, uint32_t *currentFrame) {
     // wait for previous frame to finish
@@ -386,6 +363,42 @@ void drawFrame(vk_context *vko, uint32_t *currentFrame) {
     vkQueueWaitIdle(vko->graphicsQueue);
 }
 
+static void initVulkan(vk_context *vko) {
+    vko->framebufferResized = 0; // initialize framebuffer resizing flag to 0 (off)
+    createInstance(vko);
+    pickPhysicalDevice(vko);
+    createSurface(vko);
+    findQueueFamilies(vko);
+    createLogicalDevice(vko);
+    createSwapchain(vko);
+    createImageViews(vko); // image view = vulkan interpretation of raw image source
+    createCommandPool(vko);
+    createUniformBuffer(vko);
+    createImage( // create storage image for a fullscreen quad
+        vko,
+        800,
+        800,
+        VK_FORMAT_R32G32B32A32_SFLOAT,
+        VK_IMAGE_TILING_OPTIMAL,
+        VK_IMAGE_USAGE_STORAGE_BIT | VK_IMAGE_USAGE_SAMPLED_BIT,
+        VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,
+        &vko->storageImage, &vko->storageImageMemory
+    );
+    createImageView(vko, vko->storageImage, VK_FORMAT_R32G32B32A32_SFLOAT, VK_IMAGE_ASPECT_COLOR_BIT, &vko->storageImageView);
+    createSampler(vko, &vko->storageSampler);
+    createDescriptorSetLayout(vko);
+    createDescriptorPool(vko);
+    createDescriptorSets(vko);
+    createRenderpass(vko);
+    setVertexAttributeDescriptions(vko);
+    setVertexBindingDescription(vko);
+    createGraphicsPipeline(vko);
+    createComputePipeline(vko, "./src/spvs/comp.spv");
+    createFramebuffers(vko);
+    createCommandBuffers(vko);
+    createSyncObjects(vko);
+}
+
 void cleanupRenderer(vk_context *vko) {
     for (uint32_t i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroySemaphore(vko->device, vko->imageAvailableSemaphores[i], NULL);
@@ -394,9 +407,15 @@ void cleanupRenderer(vk_context *vko) {
     }
     vkDestroyCommandPool(vko->device, vko->commandPool, NULL);
     vkDestroyPipeline(vko->device, vko->graphicsPipeline, NULL);
-    vkDestroyPipelineLayout(vko->device, vko->pipelineLayout, NULL);
+    vkDestroyPipeline(vko->device, vko->computePipeline, NULL);
+    vkDestroyPipelineLayout(vko->device, vko->graphicsPipelineLayout, NULL);
+    vkDestroyPipelineLayout(vko->device, vko->computePipelineLayout, NULL);
     vkDestroyRenderPass(vko->device, vko->renderPass, NULL);
     vkFreeMemory(vko->device, vko->testVertexBufferMemory, NULL);
+    vkDestroySampler(vko->device, vko->storageSampler, NULL);
+    vkDestroyImageView(vko->device, vko->storageImageView, NULL);
+    vkDestroyImage(vko->device, vko->storageImage, NULL);
+    vkFreeMemory(vko->device, vko->storageImageMemory, NULL);
     for (int i = 0; i < MAX_FRAMES_IN_FLIGHT; i++) {
         vkDestroyBuffer(vko->device, vko->uniformBuffers[i], NULL);
         vkFreeMemory(vko->device, vko->uniformBufferMemories[i], NULL);

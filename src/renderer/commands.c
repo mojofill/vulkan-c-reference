@@ -53,10 +53,20 @@ void recordCommands(vk_context *vko, uint32_t currentFrame) {
         renderPassInfoCmd.clearValueCount = 2;
         renderPassInfoCmd.pClearValues = clearColors;
 
+        // first, i want use the compute shader pipeline
+        vkCmdBindPipeline(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_COMPUTE, vko->computePipeline);
+        vkCmdBindDescriptorSets(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_COMPUTE, vko->computePipelineLayout, 0, 1, &vko->descriptorSets[currentFrame], 0, NULL);
+        vkCmdDispatch(vko->commandBuffers[i], 50, 50, 1); // local groups of 16x16, 800/16 = 50, thus need 50x50 groups of 16x16 local groups
+
+        createImageMemoryBarrier(vko, vko->commandBuffers[i]);
+
         // render pass = the "plan" that says what it will do after it gets the image data. its currently working with a color attachment as a placeholder. needs pipeline to actually supply the data to the color attachment
 
         vkCmdBeginRenderPass(vko->commandBuffers[i], &renderPassInfoCmd, VK_SUBPASS_CONTENTS_INLINE);
+
+        // here is graphipcs pipeline work
         vkCmdBindPipeline(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, vko->graphicsPipeline);
+        vkCmdBindDescriptorSets(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, vko->graphicsPipelineLayout, 0, 1, &vko->descriptorSets[currentFrame], 0, NULL);
 
         // specified viewport + scissor to be dynamic => must explicity set them here
         vko->viewport = (VkViewport) {0};
@@ -74,13 +84,8 @@ void recordCommands(vk_context *vko, uint32_t currentFrame) {
         vko->scissor.extent = vko->surfaceCapabilities.currentExtent;
         vkCmdSetScissor(vko->commandBuffers[i], 0, 1, &vko->scissor);
 
-        // This allows shaders to access the uniforms
-        // vkCmdBindDescriptorSets(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, vko->pipelineLayout, 0, 1, &vko->descriptorSets[currentFrame], 0, NULL);
-
-        // ADD DRAW COMMANDS HERE
-        vkCmdBindDescriptorSets(vko->commandBuffers[i], VK_PIPELINE_BIND_POINT_GRAPHICS, vko->pipelineLayout, 0, 1, &vko->descriptorSets[currentFrame], 0, NULL);
         vkCmdBindVertexBuffers(vko->commandBuffers[i], 0, 1, &vko->testVertexBuffer, (VkDeviceSize[]) {0});
-        vkCmdDraw(vko->commandBuffers[i], 3, 1, 0, 0);
+        vkCmdDraw(vko->commandBuffers[i], 6, 1, 0, 0);
 
         vkCmdEndRenderPass(vko->commandBuffers[i]);
         vkEndCommandBuffer(vko->commandBuffers[i]);

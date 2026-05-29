@@ -113,10 +113,12 @@ CMakeFiles/vk_app.dir/src/renderer/renderer.c.o: \
   /usr/local/include/GLFW/glfw3.h \
   /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/swapchain.h \
   /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/commands.h \
-  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/compute_pipeline.h \
   /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/graphics_pipeline.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/descriptors.h \
+  /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/image.h \
   /Users/henryzhang/Documents/vulkan-projects/vulkan-c-reference/src/renderer/buffer.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/string.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_string.h \

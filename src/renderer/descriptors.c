@@ -8,10 +8,18 @@ void createDescriptorSetLayout(vk_context *vko) {
     uboLayoutBinding.descriptorCount = 1;
     uboLayoutBinding.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
 
+    VkDescriptorSetLayoutBinding imageLayoutBinding = {0};
+    imageLayoutBinding.binding = 1;
+    imageLayoutBinding.descriptorType = VK_DESCRIPTOR_TYPE_STORAGE_IMAGE;
+    imageLayoutBinding.descriptorCount = 1;
+    imageLayoutBinding.stageFlags = VK_SHADER_STAGE_COMPUTE_BIT | VK_SHADER_STAGE_FRAGMENT_BIT;
+
+    VkDescriptorSetLayoutBinding bindings[2] = { uboLayoutBinding, imageLayoutBinding };
+
     VkDescriptorSetLayoutCreateInfo layoutInfo = {0};
     layoutInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO;
-    layoutInfo.pBindings = &uboLayoutBinding;
-    layoutInfo.bindingCount = 1;
+    layoutInfo.pBindings = bindings;
+    layoutInfo.bindingCount = 2;
 
     if (vkCreateDescriptorSetLayout(vko->device, &layoutInfo, NULL, &vko->descriptorSetLayout) != VK_SUCCESS) {
         printf("Failed to create descriptor set layout\n");
@@ -30,14 +38,17 @@ void createUniformBuffer(vk_context *vko) {
 }
 
 void createDescriptorPool(vk_context *vko) {
-    VkDescriptorPoolSize poolSizes[1]; // adjust for however many uniforms you want
+    VkDescriptorPoolSize poolSizes[2]; // adjust for however many uniforms you want
     // only one singular uniform buffer object needs to be allocated
     poolSizes[0].type = VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER;
     poolSizes[0].descriptorCount = (uint32_t) MAX_FRAMES_IN_FLIGHT;
 
+    poolSizes[1].type = VK_DESCRIPTOR_TYPE_STORAGE_IMAGE;
+    poolSizes[1].descriptorCount = (uint32_t) MAX_FRAMES_IN_FLIGHT; 
+
     VkDescriptorPoolCreateInfo poolInfo = {0};
     poolInfo.sType = VK_STRUCTURE_TYPE_DESCRIPTOR_POOL_CREATE_INFO;
-    poolInfo.poolSizeCount = 1;
+    poolInfo.poolSizeCount = 2;
     poolInfo.pPoolSizes = poolSizes;
     poolInfo.maxSets = (uint32_t) MAX_FRAMES_IN_FLIGHT;
 
@@ -72,8 +83,13 @@ void createDescriptorSets(vk_context *vko) {
         bufferInfo.offset = 0;
         bufferInfo.range = sizeof(UniformBufferObject);
 
+        VkDescriptorImageInfo imageInfo = {0};
+        imageInfo.imageLayout = VK_IMAGE_LAYOUT_GENERAL; // doesnt matter what layout, so set it to be general layout
+        imageInfo.imageView = vko->storageImageView;
+        imageInfo.sampler = vko->storageSampler;
+
         // write to descriptor set
-        VkWriteDescriptorSet descriptorWrites[1] = {0}; // can add more descriptor sets if necessary
+        VkWriteDescriptorSet descriptorWrites[2] = {0}; // can add more descriptor sets if necessary
         // such as samplers or storage buffers
 
         descriptorWrites[0].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
@@ -84,6 +100,14 @@ void createDescriptorSets(vk_context *vko) {
         descriptorWrites[0].descriptorCount = 1; // only updating one descriptor
         descriptorWrites[0].pBufferInfo = &bufferInfo;
 
-        vkUpdateDescriptorSets(vko->device, 1, descriptorWrites, 0, NULL);
+        descriptorWrites[1].sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+        descriptorWrites[1].dstSet = vko->descriptorSets[i];
+        descriptorWrites[1].dstBinding = 1; // binding = 1 in the shader
+        descriptorWrites[1].dstArrayElement = 0;
+        descriptorWrites[1].descriptorType = VK_DESCRIPTOR_TYPE_STORAGE_IMAGE;
+        descriptorWrites[1].descriptorCount = 1;
+        descriptorWrites[1].pImageInfo = &imageInfo;
+
+        vkUpdateDescriptorSets(vko->device, 2, descriptorWrites, 0, NULL);
     }
 }

@@ -26,10 +26,14 @@ void initializeTestVertexBuffer(vk_context *vko) {
     VkDeviceMemory stagingMemory;
 
     // recall that order of vertices is important as well. need to make sure right hand rule works
-    Vertex vertices[] = {
-        { { 0.0f, -0.5f }, { 1.0f, 0.0f, 0.0f } }, // top center, red
-        { { 0.5f, 0.5f }, { 0.0f, 1.0f, 0.0f } },  // bottom right, green
-        { { -0.5f, 0.5f }, { 0.0f, 0.0f, 1.0f } }  // bottom left, blue
+    // y is flipped, so -1 is top and 1 is bottom
+    Vertex vertices[] = {     // don't need color
+        { { -1.0f, -1.0f } }, // { 1.0f, 0.0f, 0.0f } }, // top left
+        { {  1.0f,  1.0f } }, // { 0.0f, 1.0f, 0.0f } }, // bottom right
+        { { -1.0f,  1.0f } }, // { 0.0f, 0.0f, 1.0f } }, // bottom left
+        { {  1.0f,  1.0f } }, // { 1.0f, 0.0f, 0.0f } }, // bottom right
+        { { -1.0f, -1.0f } }, // { 0.0f, 1.0f, 0.0f } }, // top left
+        { {  1.0f, -1.0f } }, // { 0.0f, 0.0f, 1.0f } }  // top right
     };
 
     // staging buffer must be host visible and host coherent so it can be copied
@@ -57,8 +61,8 @@ void initializeTestVertexBuffer(vk_context *vko) {
 int main() {
     vk_context vko = {0};
 
-    // GOAL FOR TOMORROW: create a UniformBufferObject (ubo) that stores time and spins
-    // the triangle
+    // this will basically like a vulkan-c-reference, except with an extra compute shader + using a storage texture
+    // using this: VK_DESCRIPTOR_TYPE_STORAGE_IMAGE
 
     initRenderer(&vko);
     initializeTestVertexBuffer(&vko);

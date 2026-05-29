@@ -16,10 +16,10 @@ void setVertexAttributeDescriptions(vk_context *vko) {
     vko->attrDescs[0].offset = offsetof(Vertex, pos);
 
     // attr 1: vec3 color
-    vko->attrDescs[1].binding = 0;
-    vko->attrDescs[1].location = 1;
-    vko->attrDescs[1].format = VK_FORMAT_R32G32B32_SFLOAT;
-    vko->attrDescs[1].offset = offsetof(Vertex, color);
+    // vko->attrDescs[1].binding = 0;
+    // vko->attrDescs[1].location = 1;
+    // vko->attrDescs[1].format = VK_FORMAT_R32G32B32_SFLOAT;
+    // vko->attrDescs[1].offset = offsetof(Vertex, color);
 }
 
 uint32_t findMemoryType(vk_context *vko, uint32_t typeFilter, VkMemoryPropertyFlags properties) {
