@@ -112,18 +112,75 @@ int main() {
     }
 
     // 4th step: enumerate physical devices
-    uint32_t deviceCount;
-    vkEnumeratePhysicalDevices(instance, &deviceCount, NULL);
-    if (deviceCount == 0) {
-        fprintf(stderr, "Failed to find any GPU devices\n");
-        return 1;
+    uint32_t physicalDeviceCount = 0;
+
+    vkEnumeratePhysicalDevices(vko->instance, &physicalDeviceCount, NULL);
+
+    if (physicalDeviceCount == 0) {
+        fprintf(stderr, "No Vulkan-capable GPUs found.\n");
+        exit(EXIT_FAILURE);
     }
 
-    VkPhysicalDevice *physicalDevices = malloc(deviceCount * sizeof(VkPhysicalDevice));
-    vkEnumeratePhysicalDevices(instance, &deviceCount, physicalDevices);
+    VkPhysicalDevice *physicalDevices =
+        malloc(sizeof(VkPhysicalDevice) * physicalDeviceCount);
 
-    // for now, just pick the first device as our main gpu. jason only has one anyways LOL
-    VkPhysicalDevice physicalDevice = physicalDevices[0];
+    vkEnumeratePhysicalDevices(vko->instance, &physicalDeviceCount, physicalDevices);
+
+    // printf("Found %u graphics device(s):\n", physicalDeviceCount);
+
+    int bestDevice = -1;
+    int bestScore = -1;
+
+    for (uint32_t i = 0; i < physicalDeviceCount; i++) {
+        VkPhysicalDeviceProperties properties;
+        vkGetPhysicalDeviceProperties(physicalDevices[i], &properties);
+
+        int score = 0;
+        // printf("  [%u] %s\n", i, properties.deviceName);
+
+        switch (properties.deviceType) {
+            case VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU:
+                score += 1000;
+                break;
+
+            case VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU:
+                score += 500;
+                break;
+
+            case VK_PHYSICAL_DEVICE_TYPE_VIRTUAL_GPU:
+                score += 300;
+                break;
+
+            case VK_PHYSICAL_DEVICE_TYPE_CPU:
+                score += 100;
+                break;
+
+            default:
+                break;
+        }
+
+        // Prefer newer Vulkan versions.
+        score += properties.apiVersion;
+
+        if (score > bestScore) {
+            bestScore = score;
+            bestDevice = i;
+        }
+    }
+
+    if (bestDevice == -1) {
+        fprintf(stderr, "Failed to select a physical device.\n");
+        free(physicalDevices);
+        exit(EXIT_FAILURE);
+    }
+
+    vko->physicalDevice = physicalDevices[bestDevice];
+
+    VkPhysicalDeviceProperties selectedProperties;
+    vkGetPhysicalDeviceProperties(vko->physicalDevice, &selectedProperties);
+
+    printf("Selected GPU: %s\n", selectedProperties.deviceName);
+
     free(physicalDevices);
 
     // 5th step: query queue families (properties of the physical device, the actual gpu hardware)
