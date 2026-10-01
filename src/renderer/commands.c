@@ -34,6 +34,7 @@ void resetCommands(vk_context *vko) {
 
 void recordCommands(vk_context *vko, uint32_t currentFrame) {
     // record commands (per swapchain image)
+    // yo am i tripping or am i doing extra work here that i dont need to do
     for (uint32_t i = 0; i < vko->swapchainImageCount; i++) {
         VkCommandBufferBeginInfo beginInfo = {0};
         beginInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
