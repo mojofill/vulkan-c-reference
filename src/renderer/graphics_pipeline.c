@@ -12,7 +12,8 @@ void createPipeline(
     int depthTestEnable,
     int depthWriteEnable,
     VkCullModeFlagBits cullMode,
-    VkPipeline *destPipeline
+    VkPipeline *destPipeline,
+    VkPipeline *destPipelineLayout
 ) {
     VkShaderModule vertexShaderModule = load_shader(vko->device, vert_path);
     VkShaderModule fragmentShaderModule = load_shader(vko->device, frag_path);
@@ -121,7 +122,7 @@ void createPipeline(
     pipelineLayoutInfo.pushConstantRangeCount = 0;
 
     // should create an independent layout for each layout, but this works for now
-    if (vko->graphicsPipelineLayout == NULL) vkCreatePipelineLayout(vko->device, &pipelineLayoutInfo, NULL, &vko->graphicsPipelineLayout);
+    if (*destPipelineLayout == VK_NULL_HANDLE) vkCreatePipelineLayout(vko->device, &pipelineLayoutInfo, NULL, destPipelineLayout);
 
     // now finally, put everything together into a graphics pipeline object
     VkGraphicsPipelineCreateInfo pipelineInfo = {0};
@@ -136,7 +137,7 @@ void createPipeline(
     pipelineInfo.pColorBlendState = &colorBlending;
     pipelineInfo.pDepthStencilState = &depthStencil;
     pipelineInfo.pDynamicState = &dynamicState;
-    pipelineInfo.layout = vko->graphicsPipelineLayout;
+    pipelineInfo.layout = *destPipelineLayout;
     pipelineInfo.renderPass = vko->renderPass;
     pipelineInfo.subpass = 0; // ??? i think this is an index? this means it targets subpass 0
     // subpasses are only for render passes aye man these will make sense in the future. think subpasses either read or write to attachments in the swapchain
@@ -201,6 +202,7 @@ void createGraphicsPipeline(vk_context *vko) {
         VK_FALSE, // depth test enable
         VK_FALSE, // depth write enable
         VK_CULL_MODE_BACK_BIT, // cull mode
-        &vko->graphicsPipeline
+        &vko->graphicsPipeline,
+        &vko->graphicsPipelineLayout
     );
 }
