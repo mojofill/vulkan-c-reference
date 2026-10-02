@@ -38,7 +38,7 @@ void createImage(vk_context *vko, uint32_t width, uint32_t height, VkFormat form
     vkBindImageMemory(vko->device, *image, *imageMemory, 0);
 
     // now must transition image layout to general
-    transitionImageLayout(vko, *image, VK_FORMAT_R32G32B32A32_SFLOAT, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
+    transitionImageLayout(vko, *image, format, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_GENERAL);
 }
 
 // must transition image layout to be suitable for gpu device memory manipulation
